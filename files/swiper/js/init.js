@@ -107,23 +107,22 @@ document.addEventListener('DOMContentLoaded', function() {
             spaceBetween: 24,
             speed: 1000,
             effect: 'slide',
-            loop: true,
+            loop: false,
             freeMode: {
-               enabled: true,
-               sticky: false,
-               momentum: true,
-               momentumRatio: 0.96,
-               momentumBounce: false,
+               //enabled: true,
+               //sticky: false,
+              //momentum: true,
+               //momentumRatio: 0.36,
+               //momentumBounce: true,
             },
             mousewheel: {
-               releaseOnEdges: true,
-               sensitivity: 0.2,      // плавность прокрутки
-               invert: false,
+               sensitivity: 0.4,
                eventsTarget: '#practice-single-slider',
             },
          });
       }
 
+      /*
       if (screenWidth < breakpoint && swiperInstance) {
          swiperInstance.destroy(true, true);
          swiperInstance = null;
@@ -141,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
          requestAnimationFrame(animate);
       }
       animate();
+      */
    }
 
    window.addEventListener('load', initOrDestroySlider);

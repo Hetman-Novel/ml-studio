@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    // button
-   document.querySelectorAll('.contact__content').forEach(form => {
+   document.querySelectorAll('.get-in-touch-page__item').forEach(form => {
       const checkbox = form.querySelector('input[type="checkbox"]');
-      const button = form.querySelector('button[type="submit"]');
+      const button = form.querySelector('input[type="submit"]');
 
       if (checkbox && button) {
          const toggleButton = () => {
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const observer = new MutationObserver(() => {
          if (field.classList.contains('wpcf7-not-valid')) {
-               wrap.classList.add('wrap-no-valid-field');
+            wrap.classList.add('wrap-no-valid-field');
          } else {
-               wrap.classList.remove('wrap-no-valid-field');
+            wrap.classList.remove('wrap-no-valid-field');
          }
       });
 
@@ -110,35 +110,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// 
 	const input = document.getElementById("text");
-    const counter = document.querySelector(".char-count");
-    if (input && counter) {
-        input.addEventListener("input", function () {
-            counter.textContent = input.value.length;
-        });
-    }
+   const counter = document.querySelector(".char-count");
+   if (input && counter) {
+      input.addEventListener("input", function () {
+         counter.textContent = input.value.length;
+      });
+   }
 
 
    // Popup 
    const popupSuccesfully = document.getElementById('popup-succesfully');
-    const popupFailedToSend = document.getElementById('popup-failed-to-send');
+   const popupFailedToSend = document.getElementById('popup-failed-to-send');
 
-    // Закрытие попапов
-    if (popupSuccesfully) {
-        const popupSuccesfullyClose = document.getElementById('popup-succesfully-close');
-        popupSuccesfullyClose.addEventListener('click', () => {
-            popupSuccesfully.classList.remove('open');
-        });
-    }
+   // Закрытие попапов
+   if (popupSuccesfully) {
+      const popupSuccesfullyClose = document.getElementById('popup-succesfully-close');
+      popupSuccesfullyClose.addEventListener('click', () => {
+         popupSuccesfully.classList.remove('open');
+      });
+   }
 
-    if (popupFailedToSend) {
-        const popupFailedToSendClose = document.getElementById('popup-failed-to-send-close');
-        popupFailedToSendClose.addEventListener('click', () => {
-            popupFailedToSend.classList.remove('open');
-        });
-    }
+   if (popupFailedToSend) {
+      const popupFailedToSendClose = document.getElementById('popup-failed-to-send-close');
+      popupFailedToSendClose.addEventListener('click', () => {
+         popupFailedToSend.classList.remove('open');
+      });
+   }
 
-    // Отслеживаем событие отправки любой формы CF7
-    document.addEventListener('wpcf7submit', function(event) {
+   // Отслеживаем событие отправки любой формы CF7
+   document.addEventListener('wpcf7submit', function(event) {
 		const form = event.target; 
 		const submitButton = form.querySelector('[type="submit"]');
 		const status = event.detail.status;

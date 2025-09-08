@@ -702,6 +702,18 @@ body {
   margin: 0;
 }
 
+body.page-template-contacts-page .interior-vision-brief-page__title,
+body.page-template-contacts-page .interior-vision-brief-page__blockDesc p,
+body.page-template-contacts-page .tab-name.tab-active[data-tab=step2],
+body.page-template-contacts-page form .wrap-field h2,
+body.page-template-contacts-page form .tab-content-bottom h3,
+body.page-template-contacts-page .header__blockLogo a,
+body.page-template-contacts-page .menu-item.current-menu-item,
+body.page-template-contacts-page .menu-item.current_page_item,
+body.page-template-contacts-page .menu-item:hover,
+body.page-template-contacts-page .language__item.current-lang a,
+body.page-template-contacts-page .language__item a:hover,
+body.page-template-contacts-page .header .n_btn,
 body.second-tab-is-active .interior-vision-brief-page__title,
 body.second-tab-is-active .interior-vision-brief-page__blockDesc p,
 body.second-tab-is-active .tab-name.tab-active[data-tab=step2],
@@ -753,11 +765,36 @@ body.page-template-practice-page .header .n_btn {
   color: #283F94 !important;
 }
 
+body.page-template-contacts-page .header .menu__icon span,
+body.page-template-contacts-page .header .menu__icon::after,
+body.page-template-contacts-page .header .menu__icon::before,
+body.page-template-contacts-page .header .n_btn::after,
+body.second-tab-is-active .header .menu__icon span,
+body.second-tab-is-active .header .menu__icon::after,
+body.second-tab-is-active .header .menu__icon::before,
 body.second-tab-is-active .header .n_btn::after,
+body.error404 .header .menu__icon span,
+body.error404 .header .menu__icon::after,
+body.error404 .header .menu__icon::before,
 body.error404 .header .n_btn::after,
+body.practice-single .header .menu__icon span,
+body.practice-single .header .menu__icon::after,
+body.practice-single .header .menu__icon::before,
 body.practice-single .header .n_btn::after,
+body.page-template-practice-page .header .menu__icon span,
+body.page-template-practice-page .header .menu__icon::after,
+body.page-template-practice-page .header .menu__icon::before,
 body.page-template-practice-page .header .n_btn::after {
   background-color: #283F94 !important;
+}
+
+body.page-template-contacts-page .footer .n_container::before {
+  border-color: #283F94;
+}
+
+body.page-template-contacts-page .footer__title,
+body.page-template-contacts-page .footer__list li {
+  color: #283F94;
 }
 
 body._lock {
@@ -2179,6 +2216,50 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 /* Page - Home */
 
+.home-page {
+  display: flex;
+  padding: 0 !important;
+}
+
+.home-page__content {
+  margin: auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.home-page__logo {
+  margin-bottom: 27px;
+}
+
+.home-page__logo p {
+  color: #283F94;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+}
+
+.home-page__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin-left: -45px;
+  margin-right: -45px;
+}
+
+.home-page__menu .menu-item {
+  color: #283F94;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 2px;
+  margin: 10px 45px;
+  text-transform: uppercase;
+}
+
 /* Page - About */
 
 .about-page {
@@ -2279,6 +2360,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .practice-page__title {
   color: #283F94;
   font-size: 12px;
+  font-weight: 400;
   line-height: 120%;
   letter-spacing: 2px;
   margin: 0 0 23px;
@@ -2604,6 +2686,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
   line-height: 150%;
 }
 
+main.services-page {
+  overflow: visible !important;
+}
+
 .services {
   counter-reset: section;
   padding-bottom: 71px;
@@ -2700,8 +2786,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .services .service {
+  background-color: #ccc7b7;
   border-top: 1px solid #68441C;
-  position: relative;
+  position: sticky;
+  top: 88px;
 }
 
 .services .service:nth-child(1)::before,
@@ -2753,7 +2841,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   line-height: 120%;
   -webkit-hyphens: auto;
           hyphens: auto;
-  word-break: break-word;
+  /*word-break: break-word;*/
 }
 
 .services .service__blockText {
@@ -2777,7 +2865,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   font-weight: 400;
   line-height: 120%;
   letter-spacing: 2px;
-  margin: 0 0 27px;
+  margin: 0 0 23px;
 }
 
 .contacts-page__fs-title {
@@ -3053,7 +3141,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   border: none;
   border-bottom: 2px solid #565353;
   border-radius: 0 !important;
-  color: #6C727A;
+  color: #6C727A !important;
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
@@ -3093,7 +3181,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   background-color: #FBFBFB;
   border-radius: 100px;
   border: none;
-  color: #283F94;
+  color: #68441c;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -3110,13 +3198,13 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .get-in-touch-page form .wrap-button .button:hover {
-  background-color: #283F94;
-  color: #FBFBFB;
+  background-color: #68441c;
+  color: #fff;
 }
 
 .get-in-touch-page form .wrap-button .button:disabled {
-  background-color: #565353 !important;
-  color: #9e9e9e;
+  background-color: #fff !important;
+  color: #6C727A;
   cursor: no-drop;
 }
 
@@ -4938,6 +5026,24 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
     font-size: 14px;
   }
 
+  .home-page__logo {
+    margin-bottom: 20px;
+  }
+
+  .home-page__logo p {
+    font-size: 26px;
+  }
+
+  .home-page__menu {
+    margin-left: -28px;
+    margin-right: -28px;
+  }
+
+  .home-page__menu .menu-item {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+
   .about-page__blockContent {
     width: 100%;
   }
@@ -5090,6 +5196,16 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 }
 
 @media screen and (max-width: 640.98px) {
+  .home-page__menu {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .home-page__menu .menu-item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .practice-single__content {
     padding-top: 56px;
   }
@@ -5233,6 +5349,25 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
     letter-spacing: 0;
     margin-right: 35px;
     width: 50px;
+  }
+
+  .home-page__logo {
+    margin-bottom: 10px;
+  }
+
+  .home-page__logo p {
+    font-size: 20px;
+  }
+
+  .home-page__menu {
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+
+  .home-page__menu .menu-item {
+    font-size: 12px;
+    margin-left: 14px;
+    margin-right: 14px;
   }
 
   .about-page {
@@ -5749,6 +5884,10 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 
 @media (any-hover: hover) {
   .language__item:hover a {
+    color: #68441C;
+  }
+
+  .home-page__menu .menu-item:hover {
     color: #68441C;
   }
 }
