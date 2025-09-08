@@ -765,27 +765,40 @@ body.page-template-practice-page .header .n_btn {
   color: #283F94 !important;
 }
 
+body.page-template-contacts-page .cursor-follower,
 body.page-template-contacts-page .header .menu__icon span,
 body.page-template-contacts-page .header .menu__icon::after,
 body.page-template-contacts-page .header .menu__icon::before,
 body.page-template-contacts-page .header .n_btn::after,
+body.second-tab-is-active .cursor-follower,
 body.second-tab-is-active .header .menu__icon span,
 body.second-tab-is-active .header .menu__icon::after,
 body.second-tab-is-active .header .menu__icon::before,
 body.second-tab-is-active .header .n_btn::after,
+body.error404 .cursor-follower,
 body.error404 .header .menu__icon span,
 body.error404 .header .menu__icon::after,
 body.error404 .header .menu__icon::before,
 body.error404 .header .n_btn::after,
+body.practice-single .cursor-follower,
 body.practice-single .header .menu__icon span,
 body.practice-single .header .menu__icon::after,
 body.practice-single .header .menu__icon::before,
 body.practice-single .header .n_btn::after,
+body.page-template-practice-page .cursor-follower,
 body.page-template-practice-page .header .menu__icon span,
 body.page-template-practice-page .header .menu__icon::after,
 body.page-template-practice-page .header .menu__icon::before,
 body.page-template-practice-page .header .n_btn::after {
   background-color: #283F94 !important;
+}
+
+body.page-template-contacts-page .cursor-follower.block-hover,
+body.second-tab-is-active .cursor-follower.block-hover,
+body.error404 .cursor-follower.block-hover,
+body.practice-single .cursor-follower.block-hover,
+body.page-template-practice-page .cursor-follower.block-hover {
+  background-color: #fbfbfb !important;
 }
 
 body.page-template-contacts-page .footer .n_container::before {
@@ -2464,7 +2477,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
      object-fit: cover;
   position: absolute;
   pointer-events: none;
-  transition: 0.3s ease 0s;
+  transition: 0.5s ease 0s;
   top: 0;
   width: 100%;
   z-index: 0;
@@ -2781,7 +2794,7 @@ main.services-page {
 }
 
 .services-page__blockInfo .button:hover {
-  background-color: #283F94;
+  background-color: #68441C;
   color: #FBFBFB;
 }
 
@@ -3312,6 +3325,24 @@ form .wrap-field .wrap-text {
 form .wrap-field .wrap-text p {
   font-size: 16px;
   line-height: 150%;
+}
+
+form .tabContent[data-tabcontent=step1] .button:hover {
+  background-color: #68441C !important;
+}
+
+form .tabContent[data-tabcontent=step3] .button.back {
+  border-color: #68441C !important;
+  color: #68441C !important;
+}
+
+form .tabContent[data-tabcontent=step3] .button.back:hover {
+  border-color: #68441C !important;
+  color: #fbfbfb !important;
+}
+
+form .tabContent[data-tabcontent=step3] .button:hover {
+  background-color: #68441C !important;
 }
 
 form .tab-content-bottom {
