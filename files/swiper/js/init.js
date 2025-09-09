@@ -148,44 +148,46 @@ document.addEventListener('DOMContentLoaded', function() {
    window.addEventListener('orientationchange', initOrDestroySlider);
 
    // 
-   function setTextWidth() {
-      document.querySelectorAll('.slide-inner, .slide-inner').forEach(slide => {
-         const img = slide.querySelector('img');
-         const text = slide.querySelector('.practice-single__slider-text');
+   if (window.matchMedia("(min-width: 861px)").matches) {
+      function setTextWidth() {
+         document.querySelectorAll('.slide-inner, .slide-inner').forEach(slide => {
+            const img = slide.querySelector('img');
+            const text = slide.querySelector('.practice-single__slider-text');
 
-         if (img && text) {
-            if (img.complete) {
-               text.style.width = img.offsetWidth + 'px';
-            } else {
-               img.addEventListener('load', () => {
+            if (img && text) {
+               if (img.complete) {
                   text.style.width = img.offsetWidth + 'px';
-               });
+               } else {
+                  img.addEventListener('load', () => {
+                     text.style.width = img.offsetWidth + 'px';
+                  });
+               }
             }
-         }
-      });
+         });
+      }
+      window.addEventListener('load', setTextWidth);
+      window.addEventListener('resize', setTextWidth);
+      window.addEventListener('orientationchange', setTextWidth);
+
+      // 
+      function updateSlideHeights() {
+         const slides = slider.querySelectorAll('.there-is-text');
+
+         slides.forEach(slide => {
+            const textBlock = slide.querySelector('.practice-single__slider-text');
+            const imageWrap = slide.querySelector('.slide-wrap-img');
+
+            if (textBlock && imageWrap) {
+               const slideHeight = slide.clientHeight;
+               const textHeight = textBlock.offsetHeight;
+               imageWrap.style.height = (slideHeight - textHeight) + 'px';
+            }
+         });
+      }
+      window.addEventListener('load', updateSlideHeights);
+      window.addEventListener('resize', updateSlideHeights);
+      window.addEventListener('orientationchange', updateSlideHeights);
    }
-   window.addEventListener('load', setTextWidth);
-   window.addEventListener('resize', setTextWidth);
-   window.addEventListener('orientationchange', setTextWidth);
-
-   // 
-   function updateSlideHeights() {
-      const slides = slider.querySelectorAll('.there-is-text');
-
-      slides.forEach(slide => {
-         const textBlock = slide.querySelector('.practice-single__slider-text');
-         const imageWrap = slide.querySelector('.slide-wrap-img');
-
-         if (textBlock && imageWrap) {
-            const slideHeight = slide.clientHeight;
-            const textHeight = textBlock.offsetHeight;
-            imageWrap.style.height = (slideHeight - textHeight) + 'px';
-         }
-      });
-   }
-   window.addEventListener('load', updateSlideHeights);
-   window.addEventListener('resize', updateSlideHeights);
-   window.addEventListener('orientationchange', updateSlideHeights);
 
 });
 /* <- Practice slider */

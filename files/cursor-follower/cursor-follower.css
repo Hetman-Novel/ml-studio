@@ -15,6 +15,13 @@
    font-size: 0;
    z-index: 999999;
 }
+@media (any-hover: none) {
+   
+   .cursor-follower {
+      display: none;
+      opacity: 0;
+   }
+}
 .cursor-follower.hidden {
    opacity: 0;
 }
