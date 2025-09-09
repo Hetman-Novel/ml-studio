@@ -3055,7 +3055,7 @@ main.services-page {
 }
 
 .get-in-touch-page form {
-  margin-top: 42px;
+  margin-top: 53px;
   /*input[type=submit],
   button[type=submit] {
      background-color: #2356B1;
@@ -3125,7 +3125,7 @@ main.services-page {
 }
 
 .get-in-touch-page form .wrap-field {
-  margin-top: 62px;
+  margin-top: 63px;
   transition: margin 0.3s ease 0s;
 }
 
@@ -3134,7 +3134,7 @@ main.services-page {
 }
 
 .get-in-touch-page form .wrap-field.first.active {
-  margin-top: -26px;
+  margin-top: -29px !important;
 }
 
 .get-in-touch-page form .wrap-field.first.active label {
@@ -3142,14 +3142,14 @@ main.services-page {
 }
 
 .get-in-touch-page form .wrap-field.active {
-  margin-top: 41px;
+  margin-top: -1px !important;
 }
 
 .get-in-touch-page form .wrap-field.active label {
   color: #565353;
   font-size: 14px;
   line-height: 150%;
-  margin-bottom: 1px;
+  margin-bottom: 0;
 }
 
 .get-in-touch-page form .wrap-field.active input::-moz-placeholder, .get-in-touch-page form .wrap-field.active textarea::-moz-placeholder {
@@ -3168,12 +3168,21 @@ main.services-page {
   border-color: #68441C;
 }
 
+.get-in-touch-page form .wrap-field.active.wrap-field-text {
+  margin: 0 !important;
+}
+
+.get-in-touch-page form .wrap-field.active.wrap-field-text label {
+  margin: 0 !important;
+  padding-top: 39px;
+}
+
 .get-in-touch-page form .wrap-field:not(.active) label {
-  margin-bottom: -35px;
+  margin-bottom: -39px;
 }
 
 .get-in-touch-page form .wrap-field label {
-  color: #565353;
+  color: #565353 !important;
   display: table;
   font-size: 24px;
   font-weight: 400;
@@ -3186,13 +3195,14 @@ main.services-page {
 .get-in-touch-page form .wrap-field input:not([type=submit]) {
   background-color: transparent !important;
   border: none;
-  border-bottom: 2px solid #565353;
+  border-bottom: 1px solid #565353;
   border-radius: 0 !important;
-  color: #6C727A !important;
+  color: #68441C !important;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 150%;
   height: 47px;
+  padding-bottom: 5px;
   outline: none;
   transition: background-color 0s ease-in-out 0s, border 0.3s ease 0s;
   width: 100%;
@@ -3216,6 +3226,10 @@ main.services-page {
 
 .get-in-touch-page form .wrap-field input:-webkit-autofill:focus {
   background-color: transparent !important;
+}
+
+.get-in-touch-page form .wrap-fields .wrap-field {
+  margin-top: 23px;
 }
 
 .get-in-touch-page form .wrap-button {
@@ -4331,11 +4345,15 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
   }
 
   .get-in-touch-page form .wrap-field.first.active {
-    margin-top: -32px;
+    margin-top: -35px !important;
   }
 
   .get-in-touch-page form .wrap-field.active {
-    margin-top: 35px;
+    margin-top: -7px !important;
+  }
+
+  .get-in-touch-page form .wrap-field.active.wrap-field-text label {
+    padding-top: 33px;
   }
 
   .get-in-touch-page form .wrap-field label {
@@ -4392,11 +4410,15 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
   }
 
   .get-in-touch-page form .wrap-field.first.active {
-    margin-top: -38px;
+    margin-top: -41px !important;
   }
 
   .get-in-touch-page form .wrap-field.active {
-    margin-top: 29px;
+    margin-top: -13px !important;
+  }
+
+  .get-in-touch-page form .wrap-field.active.wrap-field-text label {
+    padding-top: 27px;
   }
 
   .get-in-touch-page form .wrap-field label {
@@ -4872,7 +4894,7 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
   }
 
   .get-in-touch-page form .wrap-field.first.active {
-    margin-top: -40px;
+    margin-top: -39px !important;
   }
 
   .get-in-touch-page form .wrap-field.first.active label {
@@ -4880,11 +4902,11 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
   }
 
   .get-in-touch-page form .wrap-field.active {
-    margin-top: 20px;
+    margin-top: -11px !important;
   }
 
-  .get-in-touch-page form .wrap-field.active.wrap-field-text {
-    margin-top: 47px;
+  .get-in-touch-page form .wrap-field.active.wrap-field-text label {
+    padding-top: 48px;
   }
 
   .get-in-touch-page form .wrap-field:not(.active) label {
@@ -5080,6 +5102,10 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
     margin-bottom: 65px;
   }
 
+  .get-in-touch-page form .wrap-field.active.wrap-field-text label {
+    padding-top: 21px;
+  }
+
   .get-in-touch-page form .wrap-button {
     width: 100%;
   }
@@ -5219,6 +5245,18 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 
   .get-in-touch-page__title {
     font-size: 26px;
+  }
+
+  .get-in-touch-page form .wrap-field.first.active {
+    margin-top: -42px !important;
+  }
+
+  .get-in-touch-page form .wrap-field.active {
+    margin-top: -14px !important;
+  }
+
+  .get-in-touch-page form .wrap-field.active.wrap-field-text label {
+    padding-top: 18px;
   }
 
   .get-in-touch-page form .wrap-field:not(.active) label {
@@ -5760,31 +5798,51 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
   }
 
   .get-in-touch-page form {
-    margin-top: 50px;
+    margin-top: 31px;
   }
 
   .get-in-touch-page form .wrap-field {
     margin-top: 54px;
   }
 
+  .get-in-touch-page form .wrap-field.first {
+    margin: 0 !important;
+  }
+
   .get-in-touch-page form .wrap-field.first.active {
-    margin-top: -42px;
+    margin: -19px 0 0 !important;
+  }
+
+  .get-in-touch-page form .wrap-field.first.active label {
+    margin-top: 0;
   }
 
   .get-in-touch-page form .wrap-field.active {
-    margin-top: 17px;
+    margin-top: 35px !important;
   }
 
-  .get-in-touch-page form .wrap-field.active.wrap-field-text {
-    margin-top: 20px;
+  .get-in-touch-page form .wrap-field.active label {
+    font-size: 10px;
+    margin-bottom: -1px;
+  }
+
+  .get-in-touch-page form .wrap-field.active.wrap-field-text label {
+    padding-top: 43px;
   }
 
   .get-in-touch-page form .wrap-field:not(.active) label {
-    margin-bottom: -39px;
+    margin-bottom: -29px;
   }
 
   .get-in-touch-page form .wrap-field input:not([type=submit]) {
     font-size: 16px;
+    border-width: 2px;
+    height: 37px;
+    padding-bottom: 0;
+  }
+
+  .get-in-touch-page form .wrap-fields .wrap-field {
+    margin-top: 54px;
   }
 
   .get-in-touch-page form .wrap-button {
