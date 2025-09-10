@@ -702,6 +702,15 @@ body {
   margin: 0;
 }
 
+body.page-template-contacts-page .language .language__icon svg path,
+body.second-tab-is-active .language .language__icon svg path,
+body.error404 .language .language__icon svg path,
+body.practice-single .language .language__icon svg path,
+body.page-template-practice-page .language .language__icon svg path {
+  stroke: #283F94 !important;
+}
+
+body.page-template-contacts-page .language .language__current,
 body.page-template-contacts-page .interior-vision-brief-page__title,
 body.page-template-contacts-page .interior-vision-brief-page__blockDesc p,
 body.page-template-contacts-page .tab-name.tab-active[data-tab=step2],
@@ -714,6 +723,7 @@ body.page-template-contacts-page .menu-item:hover,
 body.page-template-contacts-page .language__item.current-lang a,
 body.page-template-contacts-page .language__item a:hover,
 body.page-template-contacts-page .header .n_btn,
+body.second-tab-is-active .language .language__current,
 body.second-tab-is-active .interior-vision-brief-page__title,
 body.second-tab-is-active .interior-vision-brief-page__blockDesc p,
 body.second-tab-is-active .tab-name.tab-active[data-tab=step2],
@@ -726,6 +736,7 @@ body.second-tab-is-active .menu-item:hover,
 body.second-tab-is-active .language__item.current-lang a,
 body.second-tab-is-active .language__item a:hover,
 body.second-tab-is-active .header .n_btn,
+body.error404 .language .language__current,
 body.error404 .interior-vision-brief-page__title,
 body.error404 .interior-vision-brief-page__blockDesc p,
 body.error404 .tab-name.tab-active[data-tab=step2],
@@ -738,6 +749,7 @@ body.error404 .menu-item:hover,
 body.error404 .language__item.current-lang a,
 body.error404 .language__item a:hover,
 body.error404 .header .n_btn,
+body.practice-single .language .language__current,
 body.practice-single .interior-vision-brief-page__title,
 body.practice-single .interior-vision-brief-page__blockDesc p,
 body.practice-single .tab-name.tab-active[data-tab=step2],
@@ -750,6 +762,7 @@ body.practice-single .menu-item:hover,
 body.practice-single .language__item.current-lang a,
 body.practice-single .language__item a:hover,
 body.practice-single .header .n_btn,
+body.page-template-practice-page .language .language__current,
 body.page-template-practice-page .interior-vision-brief-page__title,
 body.page-template-practice-page .interior-vision-brief-page__blockDesc p,
 body.page-template-practice-page .tab-name.tab-active[data-tab=step2],
@@ -2270,7 +2283,12 @@ body._touch .header .menu__list > li._active .menu__arrow {
   line-height: 120%;
   letter-spacing: 2px;
   margin: 10px 45px;
+  transition: font-weight 0.1s;
   text-transform: uppercase;
+}
+
+.home-page__menu .menu-item:hover {
+  font-weight: 700;
 }
 
 /* Page - About */
@@ -2710,12 +2728,18 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .practice-single__btn-top {
   background-color: #fbfbfb;
   border-radius: 100px;
+  bottom: 20px;
   height: 40px;
   position: fixed;
   right: 20px;
-  top: calc(63% - 2px);
+  transition: 0.3s ease 0s;
   width: 40px;
   z-index: 30;
+}
+
+.practice-single__btn-top.hidden {
+  opacity: 0;
+  transform: translateY(120%);
 }
 
 .practice-single__btn-top svg {
@@ -2886,9 +2910,6 @@ main.services-page {
 .services .service__blockTitle h2 {
   font-size: 32px;
   line-height: 120%;
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  /*word-break: break-word;*/
 }
 
 .services .service__blockText {
@@ -3282,14 +3303,10 @@ main.services-page {
   color: #F12222 !important;
 }
 
-.get-in-touch-page .wpcf7-form button[type=submit]:not(:disabled).active {
-  background: linear-gradient(90deg, #E9792F 0%, #FDE14D 51.56%, #33A8D4 100%);
-}
-
 .get-in-touch-page input:-webkit-autofill,
 .get-in-touch-page input:-webkit-autofill:hover,
 .get-in-touch-page input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #f4f4f5 !important;
+  -webkit-text-fill-color: #68441C !important;
 }
 
 /* Page - Interior vision brief */
@@ -3978,6 +3995,11 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 }
 
 @media screen and (min-width: 1025px) {
+  body.page-template-front-page .header {
+    right: 0;
+    width: 100%;
+  }
+
   body::-webkit-scrollbar {
     width: 8px;
   }
@@ -4074,6 +4096,7 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
   .header .menu__list li.current-menu-item,
   .header .menu__list li.current_page_item {
     color: #68441C;
+    font-weight: 700;
   }
 
   .header .menu__list li a {
@@ -4089,6 +4112,7 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
     letter-spacing: 2px;
     margin-left: 18px;
     margin-right: 18px;
+    transition: font-weight 0.1s;
     text-transform: uppercase;
     /*
     &.menu-item-has-children {
@@ -4371,6 +4395,14 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 }
 
 @media screen and (max-width: 1100px) {
+  body.page-template-contacts-page .header .menu__list > li::before,
+  body.second-tab-is-active .header .menu__list > li::before,
+  body.error404 .header .menu__list > li::before,
+  body.practice-single .header .menu__list > li::before,
+  body.page-template-practice-page .header .menu__list > li::before {
+    color: #283F94 !important;
+  }
+
   .custom-checkbox .custom-checkbox-text {
     font-size: 18px;
   }
@@ -5076,6 +5108,7 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 
   .services .service__blockTitle .wrap-title {
     margin-right: auto;
+    padding-right: 0;
     padding-left: 27px;
   }
 
@@ -5176,6 +5209,10 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 
   .language__current {
     font-size: 14px;
+  }
+
+  .language__icon {
+    top: 0;
   }
 
   .home-page__logo {
@@ -5308,6 +5345,14 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 }
 
 @media screen and (max-width: 720.98px) {
+  body.page-template-contacts-page .language__item::before,
+  body.second-tab-is-active .language__item::before,
+  body.error404 .language__item::before,
+  body.practice-single .language__item::before,
+  body.page-template-practice-page .language__item::before {
+    color: #283F94 !important;
+  }
+
   .language__body {
     counter-reset: section;
     left: 0;
@@ -5502,6 +5547,7 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
   .language__icon {
     height: 13px;
     margin-left: 0;
+    top: -1px;
     width: 13px;
   }
 
@@ -6105,10 +6151,7 @@ form .tab-content-bottom .wrap-button .button:not(:hover).back {
 @media (any-hover: hover) {
   .language__item:hover a {
     color: #68441C;
-  }
-
-  .home-page__menu .menu-item:hover {
-    color: #68441C;
+    font-weight: 700;
   }
 
   .practice-single__slider .slide-wrap-img:hover img {
